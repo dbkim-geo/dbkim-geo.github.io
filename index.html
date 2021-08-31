@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab01 Basemap</title>
+    <!-- leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+</head>
+<body>
+    <div id="mymap" style="height: 500px;width: 500px;"></div>
+    
+    <script type="text/javascript">
+        var map = L.map('mymap', {
+            center: [36.466262, 127.139263],//Kongju, South Korea
+            zoom: 13
+        });
+
+        L.tileLayer('http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg', {
+            attribution: 'Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under ODbL.',
+            maxZoom: 16,
+            minZoom: 4
+        }).addTo(map);
+
+        // var mymap = L.map('mymap').setView([51.505, -0.09], 13);
+
+        // map.invalidateSize();
+
+    </script>
+
+</body>
+</html>
